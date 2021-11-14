@@ -9,4 +9,5 @@ Here we goooooooooo!
 
 One more time
 
-One little, two, little three Indians
+One little two little
+Three little indians
