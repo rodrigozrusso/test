@@ -35,11 +35,15 @@ jobs:
       - setup
     steps:
       - uses: actions/checkout@v2
-      - name: print vars
-        run: |
-          echo "${{ needs.setup.steps.env-vars.outputs.environment-name }}"
-          echo "${{ needs.setup.steps.env-vars.outputs }}"
-          echo "${{ needs.setup.env.LALA }}"
-          echo "${{ needs.setup.env }}"
-          echo "${{ env.LALA }}"
-          echo "${{ LALA }}"
+      - name: print
+        run: echo "${{ needs.setup.steps.env-vars.outputs.environment-name }}"
+      - name: print 1
+        run: echo "${{ needs.setup.steps.env-vars.outputs }}"
+      - name: print 2
+        run: echo "${{ needs.setup.env.LALA }}"
+      - name: print 3
+        run: echo "${{ needs.setup.env }}"
+      - name: print 4
+        run: echo "${{ env.LALA }}"
+      - name: print 5
+        run: echo "${{ LALA }}"
