@@ -42,13 +42,14 @@ jobs:
       - uses: actions/checkout@v2
       - name: print
         run: echo "${{ needs.setup.steps.env-vars.outputs.environment-name }}"
-      - name: print 1
-        run: echo "${{ needs.setup.steps.env-vars.outputs.LELE }}"
       - name: print 2
         run: echo "${{ needs.setup.env.LALA }}"
       - name: print 3
         run: echo "${{ needs.setup.env }}"
       - name: print 4
         run: echo "${{ env.LALA }}"
+      - name: print output
+        run: echo "${{ needs.setup.steps.outputs }}"
+
       # - name: print 5
       #   run: echo "${{ LALA }}"
