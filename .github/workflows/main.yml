@@ -25,7 +25,7 @@ jobs:
           echo "${{ env.LALA }}"
 
     outputs:
-      LILI: ${{ steps.env-vars.outputs.LALA }}
+      LILI: ${{ env.LALA }}
 
   build:
     runs-on: ubuntu-latest
