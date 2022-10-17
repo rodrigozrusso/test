@@ -31,6 +31,7 @@ jobs:
       - setup
     steps:
       - uses: actions/checkout@v2
-      - run: |
-        echo "${{ needs.setup.steps.env-vars.outputs.environment-name }}"
-        echo "${{ needs.setup.env.ENV }}"
+      - name: print vars
+        run: |
+          echo "${{ needs.setup.steps.env-vars.outputs.environment-name }}"
+          echo "${{ needs.setup.env.ENV }}"
