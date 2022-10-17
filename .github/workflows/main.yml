@@ -40,4 +40,3 @@ jobs:
           echo "${{ needs.setup.steps.env-vars.outputs.environment-name }}"
           echo "${{ needs.setup.env.ENV }}"
           echo "${{ setup.env.ENV }}"
-          echo "${{ env.ENV }}"
