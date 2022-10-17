@@ -45,5 +45,5 @@ jobs:
         run: echo "${{ needs.setup.env }}"
       - name: print 4
         run: echo "${{ env.LALA }}"
-      - name: print 5
-        run: echo "${{ LALA }}"
+      # - name: print 5
+      #   run: echo "${{ LALA }}"
