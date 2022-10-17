@@ -20,20 +20,12 @@ jobs:
         if: github.event_name != 'pull_request'
         run: |
           echo "LALA=prod" >> $GITHUB_ENV
-      - name: set env vars
-        id: env-vars
-        run: |
-          echo "LELE=${{ env.LALA }}" >> $GITHUB_OUTPUT
-
       - name: print env vars
         run: |
           echo "${{ env.LALA }}"
 
-      - name: print env output
-        run: |
-          echo "${{ steps.env-vars.outputs.LELE }}"
     outputs:
-      LILI: ${{ steps.env-vars.outputs.LELE }}
+      LILI: ${{ steps.env-vars.outputs.LALA }}
 
   build:
     runs-on: ubuntu-latest
