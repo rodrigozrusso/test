@@ -41,4 +41,4 @@ jobs:
           echo "${{ needs.setup.env.ENV }}"
           echo "${{ needs.setup.env }}"
           echo "${{ env.ENV }}"
-          echo "$ENV"
+          echo "${{ ENV }}"
