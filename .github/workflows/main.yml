@@ -23,11 +23,16 @@ jobs:
       - name: set env vars
         id: env-vars
         run: |
-          echo "environment-name=${{ env.LALA }}" >> $GITHUB_OUTPUT
+          echo "LELE=${{ env.LALA }}" >> $GITHUB_OUTPUT
 
-      - name: print envs
+      - name: print env vars
         run: |
           echo "${{ env.LALA }}"
+
+      - name: print env output
+        run: |
+          echo "${{ steps.env-vars.outputs.LELE }}"
+
 
   build:
     runs-on: ubuntu-latest
@@ -38,7 +43,7 @@ jobs:
       - name: print
         run: echo "${{ needs.setup.steps.env-vars.outputs.environment-name }}"
       - name: print 1
-        run: echo "${{ needs.setup.steps.env-vars.outputs }}"
+        run: echo "${{ needs.setup.steps.env-vars.outputs.LELE }}"
       - name: print 2
         run: echo "${{ needs.setup.env.LALA }}"
       - name: print 3
