@@ -6,7 +6,7 @@ on:
       - master
   push:
     branches:
-      - master
+      - main
 
 jobs:
   setup:
@@ -35,5 +35,3 @@ jobs:
         run: |
           echo "${{ needs.setup.steps.env-vars.outputs.environment-name }}"
           echo "${{ needs.setup.env.ENV }}"
-
-          
